@@ -17,8 +17,5 @@ df['Salary'] = df['Salary'].fillna(group)
 #Удаляем строки, с пропущенным значением города, чтобы они не учитывались в подсчетах
 df.dropna(inplace = True)
 
-#Выводим среднее значение зарплаты по городу
-group = df.groupby('City')['Salary'].mean()
-
 print(df)
 print(group)
